@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gen-Z Financial Academy</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff7fb;
+}
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    position:fixed;
+    background:#f7d6e0;
+    padding:20px;
+}
+
+.sidebar a{
+    display:block;
+    margin:15px 0;
+    text-decoration:none;
+    color:#5a4351;
+    font-weight:bold;
+}
+
+.main{
+    margin-left:270px;
+    padding:30px;
+}
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+.card{
+    background:#ffeef5;
+    padding:15px;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+button{
+    background:#f7b8cf;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Topics</h2>
+
+<a href="#" onclick="showPage('home')">🏠 Home</a>
+<a href="#" onclick="showPage('creditcards')">Credit Cards</a>
+<a href="#" onclick="showPage('creditscore')">Credit Score</a>
+<a href="#" onclick="showPage('usecards')">Using Credit Cards</a>
+<a href="#" onclick="showPage('mistakes')">Common Mistakes</a>
+<a href="#" onclick="showPage('safety')">Safety Tips</a>
+<a href="#" onclick="showPage('examples')">Examples of Cards</a>
+<a href="#" onclick="showPage('questions')">Ask Questions</a>
+
+</div>
+
+<div class="main">
+
+<div id="home" class="page active">
+    <h1>Welcome to the Gen-Z Financial Academy</h1>
+
+    <p>
+        Learn everything you need to know about credit cards,
+        building credit, avoiding debt, and staying financially safe.
+    </p>
+</div>
+
+<div id="creditcards" class="page">
+    <h1>What You Should Know About Credit Cards</h1>
+
+    <p>
+        A credit card lets you borrow money from a bank and pay it back later.
+        Unlike a debit card, it does not take money directly from your bank account.
+    </p>
+</div>
+
+<div id="creditscore" class="page">
+    <h1>How To Gain Credit Score</h1>
+
+    <ul>
+        <li>Pay bills on time</li>
+        <li>Keep balances low</li>
+        <li>Use credit responsibly</li>
+        <li>Check your credit report</li>
+    </ul>
+</div>
+
+<div id="usecards" class="page">
+    <h1>How To Use Credit Cards</h1>
+
+    <p>
+        Spend only what you can afford to pay back and always make payments on time.
+    </p>
+</div>
+
+<div id="mistakes" class="page">
+    <h1>Common Credit Card Mistakes</h1>
+
+    <ul>
+        <li>Paying only the minimum balance</li>
+        <li>Missing payments</li>
+        <li>Maxing out cards</li>
+        <li>Overspending</li>
+    </ul>
+</div>
+
+<div id="safety" class="page">
+    <h1>Safety Tips & Fraud Prevention</h1>
+
+    <ul>
+        <li>Never share your PIN</li>
+        <li>Use secure websites</li>
+        <li>Check statements regularly</li>
+        <li>Report suspicious activity</li>
+    </ul>
+</div>
+
+<div id="examples" class="page">
+    <h1>Examples of Credit Cards</h1>
+
+    <div class="card">
+        <h3>Student Credit Card</h3>
+        <p>Great for beginners building credit.</p>
+    </div>
+
+    <div class="card">
+        <h3>Cash Back Credit Card</h3>
+        <p>Earn rewards on purchases.</p>
+    </div>
+
+    <div class="card">
+        <h3>Travel Rewards Card</h3>
+        <p>Earn points for travel expenses.</p>
+    </div>
+
+    <div class="card">
+        <h3>Secured Credit Card</h3>
+        <p>Helps build or rebuild credit.</p>
+    </div>
+</div>
+
+<div id="questions" class="page">
+    <h1>Ask Us Questions</h1>
+
+    <input type="text" placeholder="Your Name" style="width:300px;padding:10px;"><br><br>
+
+    <textarea placeholder="Ask your question..." rows="5" style="width:500px;"></textarea><br><br>
+
+    <button onclick="showPage('thankyou')">Submit Question</button>
+</div>
+
+<div id="thankyou" class="page">
+    <h1>Thank You!</h1>
+
+    <p>
+        Thank you for visiting the Gen-Z Financial Academy.
+        We appreciate your question and hope our website helped you learn more about personal finance.
+    </p>
+</div>
+
+</div>
+
+<script>
+function showPage(pageId){
+
+    let pages = document.querySelectorAll('.page');
+
+    pages.forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
